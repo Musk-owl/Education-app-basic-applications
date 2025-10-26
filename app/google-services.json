@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "63076974439",
+    "firebase_url": "https://edunow-aa762-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "edunow-aa762",
+    "storage_bucket": "edunow-aa762.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63076974439:android:fb7c834fce5d9663e439c2",
+        "android_client_info": {
+          "package_name": "com.example.edunow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM5jBwfKbf8QSMkyDY-FkhmxzA0_UjcyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63076974439:android:1ca5933dd0484f7be439c2",
+        "android_client_info": {
+          "package_name": "com.example.mad_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM5jBwfKbf8QSMkyDY-FkhmxzA0_UjcyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

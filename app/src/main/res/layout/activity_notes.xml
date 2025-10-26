@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="18dp">
+
+    <!-- Header: Blue accent and font -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/libertinusmono_regular"
+        android:gravity="center"
+        android:text="My Notes"
+        android:textColor="#6276FF"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edit_note_content"
+        android:hint="Write a note..."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:fontFamily="@font/robotoserif_variablefont_grad_opsz_wdth_wght"
+        android:textColor="#4152B5"
+        android:textSize="15sp"
+        android:background="@drawable/notes_edittext_bkg"
+        android:padding="12dp"
+        android:layout_marginBottom="10dp"
+        android:textColorHint="#727272"/>
+
+    <Button
+        android:id="@+id/btn_save_note"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:backgroundTint="#6276FF"
+        android:text="Save Note"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:fontFamily="@font/libertinusmono_regular"
+        app:cornerRadius="12dp"
+        android:layout_marginBottom="8dp"/>
+
+    <ProgressBar
+        android:id="@+id/notes_progress_bar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:indeterminateTint="#6276FF"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="14dp"
+        app:cardBackgroundColor="#F5F7FF"
+        app:cardElevation="2dp"
+        android:layout_marginTop="12dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notes_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"/>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

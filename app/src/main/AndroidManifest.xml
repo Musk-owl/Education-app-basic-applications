@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.edunow">
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
+        android:name="com.example.edunow.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -11,15 +16,52 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LogSignSQLPractice">
+
+        <!-- Main Activity (Login/Signup) -->
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.edunow.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Dashboard Activity -->
+        <activity
+            android:name="com.example.edunow.DashboardActivity"
+            android:exported="false" />
+
+        <!-- Courses Main Activity -->
+        <activity
+            android:name="com.example.edunow.CoursesMainActivity"
+            android:exported="false" />
+
+        <!-- Course Detail Activity -->
+        <activity
+            android:name="com.example.edunow.CourseDetailActivity"
+            android:exported="false" />
+
+        <!-- Notes Activity -->
+        <activity
+            android:name="com.example.edunow.NotesActivity"
+            android:exported="false" />
+
+        <!-- Music Player Activity -->
+        <activity
+            android:name="com.example.edunow.MusicPlayerActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.edunow.CourseContentActivity"
+            android:exported="false"
+            android:parentActivityName="com.example.edunow.DashboardActivity"/>
+
+        <service
+            android:name=".MusicService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
+
     </application>
 
 </manifest>
